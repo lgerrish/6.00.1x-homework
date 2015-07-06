@@ -1,6 +1,6 @@
 import math;
 
-# DELETEME 
+# DELETEME when submitting
 # function to get the decay curve at a year
 def f(time):
   value = 10*math.e**(math.log(0.5)/5.27 * time)
@@ -8,8 +8,18 @@ def f(time):
 # DONE DELETING ME
 
 def radiationExposure(start, stop, step):
-  return 1;
-  
+ area = 0
+ current = start
+ while current < stop:
+     length = f(current)
+     width = step
+     area += length * width
+     current+= step
+ 
+ return area 
+ 
+ 
+ 
 # ALSO DELETEME
 # TEST CASES
 print "39.103 ish?"
