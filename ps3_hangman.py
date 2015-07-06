@@ -53,9 +53,26 @@ def isWordGuessed(secretWord, lettersGuessed):
     returns: boolean, True if all the letters of secretWord are in lettersGuessed;
       False otherwise
     '''
-    # FILL IN YOUR CODE HERE...
+    start=0
+    stop= len(secretWord)
+    #create a loop that checks each letter if letter not in letters guessed 
+    #return false if make it to end return true
+    
+    current= start
+    while current<stop:
+        if secretWord[current] not in lettersGuessed:
+            return False
+        current += 1
+    return True
 
-
+            
+        
+        
+        
+        
+        #if all the letters of the secret word are in letters guessed return true
+    
+    
 
 def getGuessedWord(secretWord, lettersGuessed):
     '''
@@ -110,3 +127,17 @@ def hangman(secretWord):
 
 # secretWord = chooseWord(wordlist).lower()
 # hangman(secretWord)
+
+#expecting false
+secretWord = 'apple'
+lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
+print isWordGuessed(secretWord, lettersGuessed)
+
+secretWord = 'potato'
+lettersGuessed = ['p', 'o', 't', 'a', 'r', 's']
+print isWordGuessed(secretWord, lettersGuessed)
+
+
+secretWord = 'tomato'
+lettersGuessed = ['a', 'b', 't', 'c', 'd', 'e']
+print isWordGuessed(secretWord, lettersGuessed)
